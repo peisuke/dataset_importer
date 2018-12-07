@@ -13,8 +13,9 @@
 ```
 
 - Attributes
+```
 {
-  "image_to_text": [
+  "speech_to_text": [
     {
       "category_id": 0,
       "text": "This is a dog"
