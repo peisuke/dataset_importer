@@ -1,6 +1,6 @@
 # How to use
 
-- JSONデータ
+- JSON File (labels.json)
 ```
 [
   {
