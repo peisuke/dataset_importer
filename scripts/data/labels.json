@@ -1,0 +1,10 @@
+[
+  {
+    "label_id": 0, 
+    "label": "Dog"
+  }, 
+  {
+    "label_id": 1, 
+    "label": "Cat"
+  }
+]
