@@ -56,6 +56,6 @@ if __name__ == '__main__':
     
         data_uri = 'datalake://{}/{}'.format(channel_id, file_id)
         source_data = [{'data_uri': data_uri, 'data_type': content_type}]
-        attributes = {'image_to_text': info}
-    
+        attributes = {'speech_to_text': info}
+ 
         api_client.create_dataset_item(organization_id, dataset_id, source_data, attributes)
