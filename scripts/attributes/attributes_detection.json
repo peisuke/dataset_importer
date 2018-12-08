@@ -1,18 +1,18 @@
 {
-	"attributes": [
-		{
-			"id": 0,
-			"name": "Kind",
-			"categories": [
-				{
-					"id": 0,
-					"name": "Dog"
-				},
-				{
-					"id": 1,
-					"name": "Cat"
-				}
-			]
-		}
-	]
+  "attributes": [
+    {
+      "id": 0,
+      "name": "Kind",
+      "categories": [
+        {
+          "id": 0,
+          "name": "Dog"
+        },
+        {
+          "id": 1,
+          "name": "Cat"
+        }
+      ]
+    }
+  ]
 }

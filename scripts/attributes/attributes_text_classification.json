@@ -1,20 +1,20 @@
 {
-	"attributes": [
-		{
-			"id": 0,
-			"name": "Kind",
-			"categories": [
-				{
-					"id": 0,
-					"name": "Dog",
-					"shortcut": "t"
-				},
-				{
-					"id": 1,
-					"name": "Cat",
-					"shortcut": ""
-				}
-			]
-		}
-	]
+  "attributes": [
+    {
+      "id": 0,
+      "name": "Kind",
+      "categories": [
+        {
+          "id": 0,
+          "name": "Dog",
+          "shortcut": "t"
+        },
+        {
+          "id": 1,
+          "name": "Cat",
+          "shortcut": ""
+        }
+      ]
+    }
+  ]
 }
