@@ -1,0 +1,18 @@
+{
+  "attributes": [
+    {
+      "id": 0,
+      "name": "Kind",
+      "categories": [
+        {
+          "id": 1,
+          "name": "Dog"
+        },
+        {
+          "id": 2,
+          "name": "Cat"
+        }
+      ]
+    }
+  ]
+}

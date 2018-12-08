@@ -1,0 +1,13 @@
+{
+  "attributes": [
+    {
+      "id": 0,
+      "name": "Dog"
+    },
+    {
+      "id": 1,
+      "name": "Cat"
+    }
+  ],
+  "fps": 30
+}
