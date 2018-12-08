@@ -1,0 +1,20 @@
+{
+	"attributes": [
+		{
+			"id": 0,
+			"name": "Kind",
+			"categories": [
+				{
+					"id": 0,
+					"name": "Dog",
+					"color": "00FF00"
+				},
+				{
+					"id": 1,
+					"name": "Cat",
+					"color": "0000FF"
+				}
+			]
+		}
+	]
+}
