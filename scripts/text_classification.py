@@ -13,7 +13,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Annotation Data Importer: Text Classification')
     parser.add_argument('--input', '-i', required=True, help='Annotated data from Annotation Tool')
     parser.add_argument('--organization', '-o', required=True, help='Organization ID')
-    parser.add_argument('--label', '-l', default='data/labels.json', help='Label JSON file')
+    parser.add_argument('--attributes', '-a', default='attributes/attributes_classification.json', help='Attributes file')
     parser.add_argument('--dataset', '-d', required=True, help='Output Dataset Name')
     args = parser.parse_args()
 
@@ -25,9 +25,21 @@ if __name__ == '__main__':
     organization_id = args.organization
     datasetname = args.dataset
 
-    with open(args.label, 'r') as f:
-        labels = json.load(f)
-    
+    with open(args.attributes, 'r') as f:
+        attributes = json.load(f)
+   
+    category_name = attributes['attributes'][0]['name']
+    categories = attributes['attributes'][0]['categories']
+   
+    labels =[]
+    label_to_id = {}
+    for count, cat in enumerate(categories):
+        label_to_id[cat['name']] = count
+        labels.append({
+            'label': cat['name'],
+            'label_id': count
+        })
+
     with open(args.input, 'r') as f:
         data = json.load(f)
 
@@ -43,14 +55,10 @@ if __name__ == '__main__':
 
     dataset_id = dataset['dataset_id']
 
-    label_to_id = {}
-    for lbl in labels:
-        label_to_id[lbl['label']] = lbl['label_id']
-
     for d in data:
         channel_id = d['task']['metadata'][0]['channel_id']
-        label = d['information']['Kind']
-        label_id = label_to_id[d['information']['Kind']]
+        label = d['information'][category_name]
+        label_id = label_to_id[d['information'][category_name]]
         filename = d['task']['metadata'][0]['information']['filename']
         file_id = d['task']['metadata'][0]['source']
     
